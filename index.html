@@ -57,7 +57,36 @@
   <!-- Introduction-->
   <div class="first">
     <div class= "text-center intro">
+      <span id="AboutMe" class="typeing"></span><span class='blinker'>&#32;</span>
+      <script>
+                ar data = [
+            {
+              AboutMe: "<p class= "heading"> Hey there, I'm <h5 class = "name">Parth</h5> and welcome to my site.</p>"
+            }
+          ];
 
+          var allElements = document.getElementsByClassName("typeing");
+          for (var j = 0; j < allElements.length; j++) {
+            var currentElementId = allElements[j].id;
+            var currentElementIdContent = data[0][currentElementId];
+            var element = document.getElementById(currentElementId);
+            var devTypeText = currentElementIdContent;
+
+            // type code
+            var i = 0, isTag, text;
+            (function type() {
+              text = devTypeText.slice(0, ++i);
+              if (text === devTypeText) return;
+              element.innerHTML = text + `<span class='blinker'>&#32;</span>`;
+              var char = text.slice(-1);
+              if (char === "<") isTag = true;
+              if (char === ">") isTag = false;
+              if (isTag) return type();
+              setTimeout(type, 60);
+            })();
+          }
+
+      </script>
       <p class = "heading"> Hey there, I'm <h5 class = "name">Parth</h5> </p>
       <p class = "heading">and welcome to my site.</p>
       <a href="#about"><button class="btn success white">Learn More</button></a>
@@ -70,11 +99,11 @@
             <h1 id="about"><j class="fa fa-chevron-circle-down" border="hidden"></i></h1>
               <h1 id="about1">About me</h1>
               <div class = "text-left padding padding_up">
-              <p class="white">Hello, I'm Parth, an undergraduate student currently pursuing a Bachelor's Degree in Computer Science at <a class="text-my-own-color" href="https://www.bits-pilani.ac.in/Dubai/" target="_black">BITS Pilani</a>, Dubai Campus. </p>
+              <p class="white">Hello, I'm Parth, an Research Professional, recently  graduated with a Bachelor's Degree in Computer Science at <a class="text-my-own-color" href="https://www.bits-pilani.ac.in/Dubai/" target="_black">BITS Pilani</a>, Dubai Campus. </p>
               <p class="white"> I have had a particular interest in Computer Science since high school. I have been involved in various research projects at <a class="text-my-own-color" href="https://www.bits-pilani.ac.in/Dubai/" target="_black">BITS Pilani</a>,
-                Dubai Campus. Along with the indepth knowledge in programming skills, I have worked as a Graphic Design Intern for the Admission Department of the BITS Pilani, Dubai Campus designing necessary flyers and posters. I was also the team leader of the Robotics Club -
-                <a class="text-my-own-color" href="https://www.facebook.com/Autonomus.ifor/" target="_blank">IFOR</a>, Dubai. With respect to the projects, I worked on problems in Pattern Recognition, Autonomous Navigation, Unsupervised Machine Learning, and Deep Learning. </p>
-                <p class="white"> I am cuurently doing my undergradute thesis while being a research scholar at Florida Institute of Technology, USA at the <a class="text-my-own-color" href="https://research.fit.edu/assist-lab/">ASSIST Research Lab</a> in the field of transfer learning and formal methods of verification. </p>
+                Dubai Campus. Along with an in-depth knowledge in programming skills, I have worked as a Graphic Design Intern for the Admission Department of the BITS Pilani, Dubai Campus designing necessary flyers and posters. I was also the team leader of the Robotics Club -
+                <a class="text-my-own-color" href="https://www.facebook.com/Autonomus.ifor/" target="_blank">IFOR</a>, Dubai. With respect to the projects, I worked on problems in Pattern Recognition, Autonomous Navigation, Unsupervised Machine Learning, Trasnfer Learning, and Deep Learning. </p>
+                <p class="white"> I successfully defended my undergradute thesis in December '21 while being a research scholar at Florida Institute of Technology, USA at the <a class="text-my-own-color" href="https://research.fit.edu/assist-lab/">ASSIST Research Lab</a> in the field of transfer learning and formal methods of verification. </p>
               <p class="white">Here are some of the technologies I work with:</p>
               <div class="row align padding_down">
                   <div class="col-12">
@@ -84,8 +113,8 @@
                       <li> Databases: <span class="white"> MySQL, MongoDB</span></li>
                       <li> Machine Learning Libraries: <span class="white"> numpy, scipy, sci-kit learn, pandas, OpenCV </span></li>
                       <li> Deep Learning frameworks: <span class="white"> TensorFlow, Pytorch, Keras </span></li>
-                      <li> Formal Verification: <span class="white"> NuXmv/NuSmv, TLA+, CPAChecker </span></li>
-                      <li> Others: <span class="white">Flutter, SparkAR Studio, Adobe Photoshop, Adobe Premiere Pro, Android Studio, Arduino </span></li>
+                      <li> Formal Verification: <span class="white"> NuXmv/NuSmv, TLA+, CPAChecker, AADL </span></li>
+                      <li> Others: <span class="white">Flutter, SparkAR Studio, Adobe Photoshop, Adobe Premiere Pro, Android Studio, Arduino, LaTex </span></li>
                   </ul>
                   </div>
                   </div>
@@ -102,13 +131,13 @@
               <p class = "white"><b class="text-my-own-color">Research Scholar, <a class="text-my-own-color" href="https://research.fit.edu/assist-lab/">ASSIST Research Lab</a>, Florida Institue of Technology, USA </b></p>
               <p class="white"> August 2021 - Present</p>
               <div>
-                  <ul>
                       <li><i class="arrow right"></i><span class="white"> ASSIST (Assured Safety, Security and Intent with Systematic Tactics) Research Lab focuses on the design and development of assurance frameworks for mission-critical, safety-critical, and security-critical systems. </span></li>
                       <li><i class="arrow right"></i><span class="white"> Working with a team of research professionals for formal methods of verification and runtime assurance. </span></li>
                       <li><i class="arrow right"></i><span class="white"> Pursuing my undergraduate thesis on formal methods of transfer learning and machine learning algorithms.</span></li>
                   </ul>
               </div>
               </div>
+              <ul>
             <div class="text-left padding padding_up">
               <p class = "white"><b class="text-my-own-color" >Summer Intern, <a class="text-my-own-color" href="https://rough-paper.com/">RoughPaper</a>, Dubai</b></p>
               <p class="white"> June 2021 - August 2021</p>

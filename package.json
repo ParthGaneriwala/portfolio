@@ -1,6 +1,7 @@
 {
   "name": "react-portfolio",
   "version": "0.1.0",
+  "homepage": "https://ParthGaneriwala.github.io/portfolio/",
   "private": true,
   "dependencies": {
     "@mdi/js": "^7.4.47",
@@ -20,6 +21,7 @@
     "autoprefixer": "^10.4.7",
     "eslint": "7.32.0",
     "eslint-config-next": "11.0.1",
+    "gh-pages": "^6.1.1",
     "postcss": "^8.4.13",
     "tailwindcss": "^3.0.24"
   },
@@ -27,6 +29,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }

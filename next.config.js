@@ -1,7 +1,7 @@
 const optimize = require("next/dist/server/optimize-amp");
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  basePath: "/",
+  basePath: "",
   output: "export",  // <=== enables static exports
   images: {
     unoptimized: true

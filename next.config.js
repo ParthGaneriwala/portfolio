@@ -1,12 +1,8 @@
-module.exports = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "cdn.hashnode.com",
-        port: "",
-      },
-    ],
-  },
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  basePath: "/portfolio",
+  output: "export",  // <=== enables static exports
   reactStrictMode: true,
 };
+
+module.exports = nextConfig;

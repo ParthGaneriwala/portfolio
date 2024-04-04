@@ -79,11 +79,10 @@ jobs:
       - name: Export
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
 
-      - name: Upload Artifacts
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # this should match the `pages` option in your adapter-static options
-          path: 'build/'
+          path: ./out
 
   # Deployment job
   deploy:

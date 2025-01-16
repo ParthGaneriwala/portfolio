@@ -4,7 +4,7 @@ const Gmail = ({ marginBottom }) => {
   return (
     <div className={`w-8 h-8 ${marginBottom}`}>
         <a
-            href="https://ganeriwala.us/parth_resume.pdf"
+            href="https://parthganeriwala.com/parth_resume.pdf"
             target="_blank"
             rel="noreferrer"
         >

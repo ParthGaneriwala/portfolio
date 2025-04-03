@@ -43,7 +43,16 @@ import Linux from "../components/icons/Linux";
 import Scrum from "../components/icons/Scrum";
 import Android from "../components/icons/Android";
 import Git from "../components/icons/Git";
-import {SiApache} from "react-icons/si";
+import {SiApache, SiPandas} from "react-icons/si";
+import Pandas from "../components/icons/Pandas";
+import Dask from "../components/icons/Dask";
+import Cuda from "../components/icons/Cuda";
+import GPT from "../components/icons/GPT";
+import ROS from "../components/icons/ROS";
+import C from "../components/icons/C";
+import Pytorch from "../components/icons/Pytorch";
+import Bash from "../components/icons/Bash";
+import Gitlab from "../components/icons/Gitlab";
 
 const getDimensions = (ele) => {
   const { height } = ele.getBoundingClientRect();
@@ -582,7 +591,9 @@ export default function Home({ publications }) {
             {/* Skills icons */}
             <div className="w-full mr-auto grid gap-4 grid-cols-4 sm:grid-cols-4 md:grid-cols-8 mt-4">
                             {/* Java*/}
-              <Icon
+
+
+                <Icon
                 IconType={Java}
                 title="Java"
                 width={"w-16"}
@@ -611,6 +622,20 @@ export default function Home({ publications }) {
                 fixedHeight={"h-28"}
               />
               <Icon
+                  IconType={Pytorch}
+                  title="Pytorch"
+                  width={"w-16"}
+                  height={"h-16"}
+                  padding={"p-0"}
+                  flexDirection={"flex-col"}
+                  titleMargins={"mt-4"}
+                  titleSize={"text-sm sm:text-sm"}
+                  marginBottom={"mb-4"}
+                  marginRight={"mr-0"}
+                  textTransform={"normal-case"}
+                  fixedHeight={"h-28"}
+              />
+              <Icon
                 IconType={Tensorflow}
                 title="Tensorflow"
                 width={"w-16"}
@@ -637,6 +662,20 @@ export default function Home({ publications }) {
                 marginRight={"mr-0"}
                 textTransform={"normal-case"}
                 fixedHeight={"h-28"}
+              />
+              <Icon
+                  IconType={Pandas}
+                  title="Pandas"
+                  width={"w-16"}
+                  height={"h-16"}
+                  padding={"p-0"}
+                  flexDirection={"flex-col"}
+                  titleMargins={"mt-4"}
+                  titleSize={"text-sm sm:text-sm"}
+                  marginBottom={"mb-4"}
+                  marginRight={"mr-0"}
+                  textTransform={"normal-case"}
+                  fixedHeight={"h-28"}
               />
               {/* HTML */}
               <Icon
@@ -900,6 +939,20 @@ export default function Home({ publications }) {
                 fixedHeight={"h-28"}
               />
               <Icon
+                  IconType={Bash}
+                  title="Bash"
+                  width={"w-16"}
+                  height={"h-16"}
+                  padding={"p-0"}
+                  flexDirection={"flex-col"}
+                  titleMargins={"mt-4"}
+                  titleSize={"text-sm sm:text-sm"}
+                  marginBottom={"mb-4"}
+                  marginRight={"mr-0"}
+                  textTransform={"normal-case"}
+                  fixedHeight={"h-28"}
+              />
+              <Icon
                 IconType={Scrum}
                 title="Scrum"
                 width={"w-16"}
@@ -914,8 +967,8 @@ export default function Home({ publications }) {
                 fixedHeight={"h-28"}
               />
               <Icon
-                IconType={Android}
-                title="Android"
+                IconType={Dask}
+                title="Dask"
                 width={"w-16"}
                 height={"h-16"}
                 padding={"p-0"}
@@ -941,17 +994,194 @@ export default function Home({ publications }) {
                 textTransform={"normal-case"}
                 fixedHeight={"h-28"}
               />
+              <Icon
+                  IconType={Gitlab}
+                  title="Gitlab"
+                  width={"w-16"}
+                  height={"h-16"}
+                  padding={"p-0"}
+                  flexDirection={"flex-col"}
+                  titleMargins={"mt-4"}
+                  titleSize={"text-sm sm:text-sm"}
+                  marginBottom={"mb-4"}
+                  marginRight={"mr-0"}
+                  textTransform={"normal-case"}
+                  fixedHeight={"h-28"}
+              />
+              <Icon
+                  IconType={Android}
+                  title="Android"
+                  width={"w-16"}
+                  height={"h-16"}
+                  padding={"p-0"}
+                  flexDirection={"flex-col"}
+                  titleMargins={"mt-4"}
+                  titleSize={"text-sm sm:text-sm"}
+                  marginBottom={"mb-4"}
+                  marginRight={"mr-0"}
+                  textTransform={"normal-case"}
+                  fixedHeight={"h-28"}
+              />
+              <Icon
+                  IconType={Cuda}
+                  title="Cuda"
+                  width={"w-16"}
+                  height={"h-16"}
+                  padding={"p-0"}
+                  flexDirection={"flex-col"}
+                  titleMargins={"mt-4"}
+                  titleSize={"text-sm sm:text-sm"}
+                  marginBottom={"mb-4"}
+                  marginRight={"mr-0"}
+                  textTransform={"normal-case"}
+                  fixedHeight={"h-28"}
+              />
+              <Icon
+                  IconType={GPT}
+                  title="GPT"
+                  width={"w-16"}
+                  height={"h-16"}
+                  padding={"p-0"}
+                  flexDirection={"flex-col"}
+                  titleMargins={"mt-4"}
+                  titleSize={"text-sm sm:text-sm"}
+                  marginBottom={"mb-4"}
+                  marginRight={"mr-0"}
+                  textTransform={"normal-case"}
+                  fixedHeight={"h-28"}
+              />
+              <Icon
+                  IconType={ROS}
+                  title="ROS"
+                  width={"w-16"}
+                  height={"h-16"}
+                  padding={"p-0"}
+                  flexDirection={"flex-col"}
+                  titleMargins={"mt-4"}
+                  titleSize={"text-sm sm:text-sm"}
+                  marginBottom={"mb-4"}
+                  marginRight={"mr-0"}
+                  textTransform={"normal-case"}
+                  fixedHeight={"h-28"}
+              />
 
 
 
             </div>
           </section>
 
+          {/*/!* My Work *!/*/}
+          {/*<section*/}
+          {/*  className="flex flex-col w-full px-0 md:px-20 lg:px-24 py-28 section"*/}
+          {/*  id="my-work"*/}
+          {/*  ref={myWorkRef}*/}
+          {/*>*/}
+          {/*  /!* My Work header *!/*/}
+          {/*  <h2 className="text-5xl">My Work</h2>*/}
+          {/*  <hr className="bg-brand w-40 h-1.5 mt-4 mb-6 border-0"></hr>*/}
+
+          {/*  /!* Featured Projects Container *!/*/}
+          {/*  <div className="flex flex-col w-full mb-12">*/}
+          {/*    /!* Project One *!/*/}
+          {/*    <FeaturedProjectCard*/}
+          {/*      title={"Soar to nuXmv Translator"}*/}
+          {/*    status={"Check it out!"}*/}
+          {/*      description={`A tool converting SOAR (State, Operator, And Result) specifications into NuXmv-compatible models for formal verification and analysis of reactive systems.`}*/}
+          {/*      float={`right-0`}*/}
+          {/*      flexDirection={`flex-col lg:flex-row`}*/}
+          {/*      imgWidth={"1366"}*/}
+          {/*      imgHeight={"666"}*/}
+          {/*      imgSrc={"/nuxmvSoar.png"}*/}
+          {/*      liveLink={"https://assistresearchlab.fit.edu/"}*/}
+          {/*      repoLink={null}*/}
+          {/*      stack={*/}
+          {/*        <>*/}
+          {/*          <Icon*/}
+          {/*            IconType={Html}*/}
+          {/*            title="HTML"*/}
+          {/*            columnSizing={"w-auto"}*/}
+          {/*            width={"w-6"}*/}
+          {/*            height={"h-6"}*/}
+          {/*            flexDirection={"flex-row"}*/}
+          {/*            padding={"p-0"}*/}
+          {/*            titleMargins={"my-0 ml-1"}*/}
+          {/*            titleSize={"text-sm"}*/}
+          {/*            marginBottom={"mb-4"}*/}
+          {/*            marginRight={"mr-3"}*/}
+          {/*            textTransform={"uppercase"}*/}
+          {/*            fixedHeight={"h-auto"}*/}
+          {/*          />*/}
+
+          {/*          <Icon*/}
+          {/*            IconType={Css}*/}
+          {/*            title="Css"*/}
+          {/*            columnSizing={"w-auto"}*/}
+          {/*            width={"w-6"}*/}
+          {/*            height={"h-6"}*/}
+          {/*            flexDirection={"flex-row"}*/}
+          {/*            padding={"p-0"}*/}
+          {/*            titleMargins={"my-0 ml-1"}*/}
+          {/*            titleSize={"text-sm"}*/}
+          {/*            marginBottom={"mb-4"}*/}
+          {/*            marginRight={"mr-3"}*/}
+          {/*            textTransform={"uppercase"}*/}
+          {/*            fixedHeight={"h-auto"}*/}
+          {/*          />*/}
+
+          {/*          <Icon*/}
+          {/*            IconType={ReactJs}*/}
+          {/*            title="React"*/}
+          {/*            columnSizing={"w-auto"}*/}
+          {/*            width={"w-6"}*/}
+          {/*            height={"h-6"}*/}
+          {/*            flexDirection={"flex-row"}*/}
+          {/*            padding={"p-0"}*/}
+          {/*            titleMargins={"my-0 ml-1"}*/}
+          {/*            titleSize={"text-sm"}*/}
+          {/*            marginBottom={"mb-4"}*/}
+          {/*            marginRight={"mr-3"}*/}
+          {/*            textTransform={"uppercase"}*/}
+          {/*            fixedHeight={"h-auto"}*/}
+          {/*          />*/}
+
+          {/*          <Icon*/}
+          {/*            IconType={NodeJs}*/}
+          {/*            title="NodeJs"*/}
+          {/*            columnSizing={"w-auto"}*/}
+          {/*            width={"w-6"}*/}
+          {/*            height={"h-6"}*/}
+          {/*            flexDirection={"flex-row"}*/}
+          {/*            padding={"p-0"}*/}
+          {/*            titleMargins={"my-0 ml-1"}*/}
+          {/*            titleSize={"text-sm"}*/}
+          {/*            marginBottom={"mb-4"}*/}
+          {/*            marginRight={"mr-3"}*/}
+          {/*            textTransform={"uppercase"}*/}
+          {/*            fixedHeight={"h-auto"}*/}
+          {/*          />*/}
+          {/*        </>*/}
+          {/*      }*/}
+          {/*    />*/}
+
+          {/*  /!* Other Projects header *!/*/}
+          {/*  <h2 className="text-4xl text-center">Other Projects</h2>*/}
+          {/*  <hr className="bg-brand w-40 h-1.5 mt-4 mb-6 mx-auto border-0"></hr>*/}
+          {/*  <p className="mb-16 text-lg text-center">*/}
+          {/*    Coming Soon...*/}
+          {/*  </p>*/}
+
+          {/*  /!*Other Projects Container *!/*/}
+          {/*  /!*<div className="grid grid-flow-row grid-rows-2 gap-4 grid-col-1 lg:grid-cols-3">*!/*/}
+          {/*  /!*  {projects.map(function (project, i) {*!/*/}
+          {/*  /!*    return <ProjectCard project={project} key={i} />;*!/*/}
+          {/*  /!*  })}*!/*/}
+          {/*  </div>*/}
+          {/*</section>*/}
           {/* My Work */}
           <section
-            className="flex flex-col w-full px-0 md:px-20 lg:px-24 py-28 section"
-            id="my-work"
-            ref={myWorkRef}
+              className="flex flex-col w-full px-0 md:px-20 lg:px-24 py-28 section"
+              id="my-work"
+              ref={myWorkRef}
           >
             {/* My Work header */}
             <h2 className="text-5xl">My Work</h2>
@@ -961,84 +1191,133 @@ export default function Home({ publications }) {
             <div className="flex flex-col w-full mb-12">
               {/* Project One */}
               <FeaturedProjectCard
-                title={"Soar to nuXmv Translator"}
-              status={"Check it out!"}
-                description={`A tool converting SOAR (State, Operator, And Result) specifications into NuXmv-compatible models for formal verification and analysis of reactive systems.`}
-                float={`right-0`}
-                flexDirection={`flex-col lg:flex-row`}
-                imgWidth={"1366"}
-                imgHeight={"666"}
-                imgSrc={"/nuxmvSoar.png"}
-                liveLink={"https://assistresearchlab.fit.edu/"}
-                repoLink={null}
-                stack={
-                  <>
-                    <Icon
-                      IconType={Html}
-                      title="HTML"
-                      columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
-                      flexDirection={"flex-row"}
-                      padding={"p-0"}
-                      titleMargins={"my-0 ml-1"}
-                      titleSize={"text-sm"}
-                      marginBottom={"mb-4"}
-                      marginRight={"mr-3"}
-                      textTransform={"uppercase"}
-                      fixedHeight={"h-auto"}
-                    />
-
-                    <Icon
-                      IconType={Css}
-                      title="Css"
-                      columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
-                      flexDirection={"flex-row"}
-                      padding={"p-0"}
-                      titleMargins={"my-0 ml-1"}
-                      titleSize={"text-sm"}
-                      marginBottom={"mb-4"}
-                      marginRight={"mr-3"}
-                      textTransform={"uppercase"}
-                      fixedHeight={"h-auto"}
-                    />
-
-                    <Icon
-                      IconType={ReactJs}
-                      title="React"
-                      columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
-                      flexDirection={"flex-row"}
-                      padding={"p-0"}
-                      titleMargins={"my-0 ml-1"}
-                      titleSize={"text-sm"}
-                      marginBottom={"mb-4"}
-                      marginRight={"mr-3"}
-                      textTransform={"uppercase"}
-                      fixedHeight={"h-auto"}
-                    />
-
-                    <Icon
-                      IconType={NodeJs}
-                      title="NodeJs"
-                      columnSizing={"w-auto"}
-                      width={"w-6"}
-                      height={"h-6"}
-                      flexDirection={"flex-row"}
-                      padding={"p-0"}
-                      titleMargins={"my-0 ml-1"}
-                      titleSize={"text-sm"}
-                      marginBottom={"mb-4"}
-                      marginRight={"mr-3"}
-                      textTransform={"uppercase"}
-                      fixedHeight={"h-auto"}
-                    />
-                  </>
-                }
+                  title={"Soar to nuXmv Translator"}
+                  status={"Check it out!"}
+                  description={`A tool converting SOAR (State, Operator, And Result) specifications into NuXmv-compatible models for formal verification and analysis of reactive systems.`}
+                  float={`right-0`}
+                  flexDirection={`flex-col lg:flex-row`}
+                  imgWidth={"1366"}
+                  imgHeight={"666"}
+                  imgSrc={"/nuxmvSoar.png"}
+                  liveLink={"https://assistresearchlab.fit.edu/"}
+                  repoLink={null}
+                  stack={
+                    <>
+                      <Icon IconType={Html} title="HTML" columnSizing={"w-auto"} width={"w-6"} height={"h-6"} flexDirection={"flex-row"} padding={"p-0"} titleMargins={"my-0 ml-1"} titleSize={"text-sm"} marginBottom={"mb-4"} marginRight={"mr-3"} textTransform={"uppercase"} fixedHeight={"h-auto"} />
+                      <Icon IconType={Css} title="Css" columnSizing={"w-auto"} width={"w-6"} height={"h-6"} flexDirection={"flex-row"} padding={"p-0"} titleMargins={"my-0 ml-1"} titleSize={"text-sm"} marginBottom={"mb-4"} marginRight={"mr-3"} textTransform={"uppercase"} fixedHeight={"h-auto"} />
+                      <Icon IconType={ReactJs} title="React" columnSizing={"w-auto"} width={"w-6"} height={"h-6"} flexDirection={"flex-row"} padding={"p-0"} titleMargins={"my-0 ml-1"} titleSize={"text-sm"} marginBottom={"mb-4"} marginRight={"mr-3"} textTransform={"uppercase"} fixedHeight={"h-auto"} />
+                      <Icon IconType={NodeJs} title="NodeJs" columnSizing={"w-auto"} width={"w-6"} height={"h-6"} flexDirection={"flex-row"} padding={"p-0"} titleMargins={"my-0 ml-1"} titleSize={"text-sm"} marginBottom={"mb-4"} marginRight={"mr-3"} textTransform={"uppercase"} fixedHeight={"h-auto"} />
+                    </>
+                  }
               />
+
+
+
+              {/* Project Three */}
+              <FeaturedProjectCard
+                  title={"ALINA + AssistTaxi Dataset"}
+                  status={"Published @ CVPR'24"}
+                  description={`Line marking identification system using the AssistTaxi dataset for autonomous taxiway navigation.`}
+                  float={`right-0`}
+                  flexDirection={`flex-col lg:flex-row-reverse`}
+                  imgWidth={"1366"}
+                  imgHeight={"666"}
+                  imgSrc={"/assist.png"}
+                  liveLink={"https://openaccess.thecvf.com/content/CVPR2024W/VDU/html/Khan_ALINA_Advanced_Line_Identification_and_Notation_Algorithm_CVPRW_2024_paper.html"}
+                  repoLink={null}
+                  stack={<><Icon
+                      IconType={OpenCV}
+                      title="OpenCV"
+                      width={"w-16"}
+                      height={"h-16"}
+                      padding={"p-0"}
+                      flexDirection={"flex-col"}
+                      titleMargins={"mt-4"}
+                      titleSize={"text-sm sm:text-sm"}
+                      marginBottom={"mb-4"}
+                      marginRight={"mr-0"}
+                      textTransform={"normal-case"}
+                      fixedHeight={"h-28"}
+                  /></>}
+              />
+
+              {/* Project Two */}
+              <FeaturedProjectCard
+                  title={"Automated Framework to Extract Software Requirements from Source Code"}
+                  status={"Published @ NLPIR'23"}
+                  description={`A framework using AI language models to automatically extract software requirements from source code `}
+                  float={`left-0`}
+                  flexDirection={`flex-col lg:flex-row`}
+                  imgWidth={"1366"}
+                  imgHeight={"666"}
+                  imgSrc={"/auto.png"}
+                  liveLink={"https://dl.acm.org/doi/abs/10.1145/3639233.3639242"}
+                  repoLink={null}
+                  stack={<><Icon
+                      IconType={Java}
+                      title="Java"
+                      width={"w-16"}
+                      height={"h-16"}
+                      padding={"p-0"}
+                      flexDirection={"flex-col"}
+                      titleMargins={"mt-4"}
+                      titleSize={"text-sm sm:text-sm"}
+                      marginBottom={"mb-4"}
+                      marginRight={"mr-0"}
+                      textTransform={"normal-case"}
+                      fixedHeight={"h-28"}
+                  /></>}
+              />
+              {/* Project Four */}
+              <FeaturedProjectCard
+                  title={"Auto SysML Activity Diagrams"}
+                  status={"SysCon '25 Accepted"}
+                  description={`Functional reasoning tool to automatically generate SysML activity diagrams from structured natural language.`}
+                  float={`left-0`}
+                  flexDirection={`flex-col lg:flex-row-reverse`}
+                  imgWidth={"1366"}
+                  imgHeight={"666"}
+                  imgSrc={"/sysml.png"}
+                  liveLink={"https://arxiv.org/abs/2501.18514"}
+                  repoLink={null}
+                  stack={<><Icon
+                      IconType={Java}
+                      title="Java"
+                      width={"w-16"}
+                      height={"h-16"}
+                      padding={"p-0"}
+                      flexDirection={"flex-col"}
+                      titleMargins={"mt-4"}
+                      titleSize={"text-sm sm:text-sm"}
+                      marginBottom={"mb-4"}
+                      marginRight={"mr-0"}
+                      textTransform={"normal-case"}
+                      fixedHeight={"h-28"}
+                  /></>}
+              />
+            </div>
+
+            {/*/!* Expertise / Research Interests *!/*/}
+            {/*<div className="flex flex-wrap gap-2 mb-12">*/}
+            {/*  <Badge text="Transfer Learning" />*/}
+            {/*  <Badge text="Formal Methods" />*/}
+            {/*  <Badge text="Cognitive Architectures" />*/}
+            {/*  <Badge text="SysML" />*/}
+            {/*  <Badge text="NuXmv" />*/}
+            {/*  <Badge text="Autonomous Systems" />*/}
+            {/*</div>*/}
+
+            {/*/!* Collaborators / Partners *!/*/}
+            {/*<div className="mb-20">*/}
+            {/*  <h3 className="text-3xl mb-4 text-center">Collaborators</h3>*/}
+            {/*  <div className="flex flex-wrap justify-center items-center gap-6">*/}
+            {/*    <img src="/logos/nasa.png" alt="NASA" className="h-12" />*/}
+            {/*    <img src="/logos/darpa.png" alt="DARPA" className="h-12" />*/}
+            {/*    <img src="/logos/collins.png" alt="Collins" className="h-12" />*/}
+            {/*    <img src="/logos/fit.png" alt="FIT" className="h-12" />*/}
+            {/*    <img src="/logos/raytheon.png" alt="Raytheon" className="h-12" />*/}
+            {/*  </div>*/}
+            {/*</div>*/}
 
             {/* Other Projects header */}
             <h2 className="text-4xl text-center">Other Projects</h2>
@@ -1047,12 +1326,12 @@ export default function Home({ publications }) {
               Coming Soon...
             </p>
 
-            {/*/!* Other Projects Container *!/*/}
+            {/* Other Projects Container */}
             {/*<div className="grid grid-flow-row grid-rows-2 gap-4 grid-col-1 lg:grid-cols-3">*/}
             {/*  {projects.map(function (project, i) {*/}
             {/*    return <ProjectCard project={project} key={i} />;*/}
             {/*  })}*/}
-            </div>
+            {/*</div>*/}
           </section>
 
 

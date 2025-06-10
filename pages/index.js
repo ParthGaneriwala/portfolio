@@ -512,6 +512,7 @@ export default function Home({ publications }) {
                       "Ph.D. Candidate",
                       "Avid Amine Watcher",
                       "Writer",
+                      "Prati Lover",
                     ]}
                   />
                 </h2>

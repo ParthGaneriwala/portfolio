@@ -509,7 +509,7 @@ export default function Home({ publications }) {
                     eraseDelay={1500}
                     text={[
                       "Research Professional",
-                      "PhD Student",
+                      "Ph.D. Candidate",
                       "Avid Amine Watcher",
                       "Writer",
                     ]}

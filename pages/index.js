@@ -545,7 +545,7 @@ export default function Home({ publications }) {
                 <div className="flex flex-col w-full md:pr-8 md:w-3/5">
                   <p className="text-lg">
                     Hi! I&apos;m Parth and I&apos;m a Graduate Research Assistant,
-                    and a doctoral student in Computer Science at {""}
+                    and a doctoral candidate in Computer Science at {""}
                   <a
                       class="underline-link"
                       href="https://fit.edu"

@@ -26,7 +26,7 @@ jobs:
       - name: Compile resume_cv.tex to PDF
         run: |
           cd resume
-          pdflatex -interaction=nonstopmode resume_cv.tex
+          xelatex -interaction=nonstopmode resume_cv.tex
           cp resume_cv.pdf ../portfolio/public/parth_resume.pdf
 
       - name: Commit and push PDF to portfolio repo
@@ -35,7 +35,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add public/parth_resume.pdf
-          git commit -m "Update resume PDF from Resume repo"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          git commit -m "Update resume PDF from Resume repo" || echo "Nothing to commit"
+          git push https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/ParthGaneriwala/portfolio.git HEAD:main

@@ -1,0 +1,41 @@
+name: Update Resume PDF from Resume Repo
+
+on:
+  repository_dispatch:
+    types: [resume-updated]
+
+jobs:
+  build-and-copy-resume:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout portfolio repo
+        uses: actions/checkout@v4
+        with:
+          path: portfolio
+
+      - name: Checkout resume repo
+        uses: actions/checkout@v4
+        with:
+          repository: ParthGaneriwala/Resume
+          path: resume
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+      - name: Install TeX Live (LaTeX)
+        run: sudo apt-get update && sudo apt-get install -y texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
+
+      - name: Compile resume_cv.tex to PDF
+        run: |
+          cd resume
+          pdflatex -interaction=nonstopmode resume_cv.tex
+          cp resume_cv.pdf ../portfolio/public/parth_resume.pdf
+
+      - name: Commit and push PDF to portfolio repo
+        run: |
+          cd ../portfolio
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add public/parth_resume.pdf
+          git commit -m "Update resume PDF from Resume repo"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

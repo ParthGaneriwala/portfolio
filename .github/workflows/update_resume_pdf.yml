@@ -36,4 +36,4 @@ jobs:
           git config user.email "github-actions@github.com"
           git add public/parth_resume.pdf
           git commit -m "Update resume PDF from Resume repo" || echo "Nothing to commit"
-          git push https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/ParthGaneriwala/portfolio.git HEAD:main
+          git push https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/ParthGaneriwala/portfolio.git HEAD:master

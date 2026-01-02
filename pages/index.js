@@ -519,14 +519,25 @@ export default function Home({ publications }) {
                 <p className="w-4/5 text-xl md:w-full">
                   I design and build systems that are safe, and work well.
                 </p>
-                <button
-                  className="mt-4 btn-brand btn-lg group"
-                  onClick={() => {
-                    scrollTo(myWorkRef.current);
-                  }}
-                >
-                  See my Work
-                </button>
+                
+                <div className="mt-4 flex flex-col sm:flex-row gap-3">
+                  {/* Download Resume */}
+                  <a
+                    href="/Parth_Ganeriwala_Resume.pdf"
+                    download
+                    className="btn-brand btn-lg group inline-flex items-center justify-center"
+                  >
+                    Download Resume
+                  </a>
+                
+                  {/* Keep your existing scroll button (optional) */}
+                  <button
+                    className="btn-brand btn-lg group"
+                    onClick={() => scrollTo(myWorkRef.current)}
+                  >
+                    See my Work
+                  </button>
+                </div>
               </div>
             </div>
           </main>

@@ -523,7 +523,7 @@ export default function Home({ publications }) {
                 <div className="mt-4 flex flex-col sm:flex-row gap-3">
                   {/* Download Resume */}
                   <a
-                    href="/Parth_Ganeriwala_Resume.pdf"
+                    href="/parth_resume.pdf"
                     download
                     className="btn-brand btn-lg group inline-flex items-center justify-center"
                   >

@@ -1278,6 +1278,16 @@ export default function Home({ publications }) {
                 </li>
               ))}
             </ul>
+            <p className="mb-16 text-lg text-center">
+              <a
+                className="underline-link"
+                href="https://scholar.google.com/citations?user=aG73xF8AAAAJ&hl=en&oi=ao"
+                target="_blank"
+                rel="noreferrer"
+              >
+                See all publications on Google Scholar
+              </a>
+            </p>
 
             {/* Other Projects Container */}
             {/*<div className="grid grid-flow-row grid-rows-2 gap-4 grid-col-1 lg:grid-cols-3">*/}

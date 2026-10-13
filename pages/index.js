@@ -959,7 +959,7 @@ export default function Home({ publications }) {
                 ].map((skill) => (
                   <li
                     key={skill}
-                    className="px-3 py-1 text-sm border rounded-full border-brand"
+                    className="px-3 py-1 text-sm border rounded-full border-brand text-dark dark:text-light"
                   >
                     {skill}
                   </li>
@@ -1217,48 +1217,59 @@ export default function Home({ publications }) {
             {/*  </div>*/}
             {/*</div>*/}
 
-            {/* Selected Publications */}
-            <h2 className="text-4xl text-center">Selected Publications</h2>
+            {/* Most Cited Publications */}
+            <h2 className="text-4xl text-center">Most Cited Publications</h2>
             <hr className="bg-brand w-40 h-1.5 mt-4 mb-6 mx-auto border-0"></hr>
             <p className="mb-8 text-lg text-center">
               30 accepted peer-reviewed publications in formal verification,
               assurance, and machine learning for autonomous systems.
             </p>
-            <ul className="mb-16 space-y-4 text-lg">
+            <ul className="mb-16 space-y-4 text-lg text-dark dark:text-light">
               {[
                 {
-                  title: "Formal Analysis of Stochastic Cognitive Models: A Translation Framework from Soar to PRISM",
-                  venue: "NASA Formal Methods 2026",
-                  href: "https://link.springer.com/chapter/10.1007/978-3-032-28079-4_9",
+                  title: "Automated Framework to Extract Software Requirements from Source Code",
+                  venue: "NLPIR 2023",
+                  href: "https://dl.acm.org/doi/abs/10.1145/3639233.3639242",
                 },
                 {
-                  title: "VIROPLEX: A GNN-Driven Assessment of the Pandemic Potential of Zoonotic Bat Viruses",
-                  venue: "IEEE ICTAI 2026",
+                  title: "Assuring Learning-Enabled Increasingly Autonomous Systems",
+                  venue: "IEEE SysCon 2023",
+                  href: "https://ieeexplore.ieee.org/abstract/document/10131227",
                 },
                 {
-                  title: "Compositional Reasoning over System Architectures with Integrated Cognitive Model",
-                  venue: "IEEE SysCon 2026",
+                  title: "Systems Engineering With Architecture Modeling, Formal Verification, and Human Interactions for Learning-Enabled Autonomous Agent",
+                  venue: "Systems Engineering 28(5), 2025",
+                  href: "https://incose.onlinelibrary.wiley.com/doi/10.1002/sys.21816",
                 },
                 {
-                  title: "AssistTaxi-v2: A Scalable Dataset for Taxiway/Runway Scene Understanding Under Diverse Conditions",
-                  venue: "AIAA SciTech 2026",
+                  title: "Design and Validation of Learning Aware HMI for Learning-Enabled Increasingly Autonomous Systems",
+                  venue: "IEEE SysCon 2025",
+                  href: "https://ieeexplore.ieee.org/document/11014784",
                 },
                 {
-                  title: "Correlation-Threshold Feature Selection for Internet of Things (IoT) Device Identification under Domain Shift",
-                  venue: "ISAIM 2026",
+                  title: "Runway vs. Taxiway: Challenges in Automated Line Identification and Notation Approaches",
+                  venue: "IEEE SysCon 2025",
+                  href: "https://ieeexplore.ieee.org/document/11014782",
                 },
                 {
-                  title: "Explainable Assurance through Compositional Verification with Cognitive Models",
-                  venue: "IEEE RTSS/ESRA 2025",
+                  title: "ALINA: Advanced Line Identification and Notation Algorithm",
+                  venue: "CVPR VDU Workshop 2024",
+                  href: "https://openaccess.thecvf.com/content/CVPR2024W/VDU/html/Khan_ALINA_Advanced_Line_Identification_and_Notation_Algorithm_CVPRW_2024_paper.html",
                 },
                 {
-                  title: "Can Someone Prove Your Operator Won’t Get Distracted? A Gentle Introduction to Formal Methods in Human Factors",
-                  venue: "HFES 2025",
-                  href: "https://journals.sagepub.com/doi/full/10.1177/10711813251369496",
+                  title: "AssistTaxi: A Comprehensive Dataset for Taxiway Analysis and Autonomous Operations",
+                  venue: "IEEE ICMLA 2023",
+                  href: "https://ieeexplore.ieee.org/abstract/document/10459875",
                 },
                 {
-                  title: "Evaluating LLM Translation for Prompt-Enhanced ACT-R and Soar Models",
-                  venue: "BRIMS 2025",
+                  title: "Cross Dataset Analysis and Network Architecture Repair for Autonomous Car Lane Detection",
+                  venue: "IEEE Intelligent Vehicles Symposium (IV) 2023",
+                  href: "https://ieeexplore.ieee.org/abstract/document/10186721",
+                },
+                {
+                  title: "Towards Knowledge Extraction and Parsing of XML Metadata for SysML System Architecture Modeling",
+                  venue: "IEEE UEMCON 2023",
+                  href: "https://ieeexplore.ieee.org/abstract/document/10316143",
                 },
               ].map((pub) => (
                 <li key={pub.title}>

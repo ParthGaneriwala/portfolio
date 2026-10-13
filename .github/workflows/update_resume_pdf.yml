@@ -28,22 +28,24 @@ jobs:
       - name: Install TeX Live (LaTeX)
         run: sudo apt-get update && sudo apt-get install -y texlive-xetex texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra
 
-      - name: Compile resume_cv.tex to PDF
+      - name: Compile both CVs to PDF
         run: |
           cd resume
           xelatex -interaction=nonstopmode resume_cv.tex
+          xelatex -interaction=nonstopmode resume_cv_academia.tex
           cp resume_cv.pdf ../portfolio/public/parth_resume.pdf
+          cp resume_cv_academia.pdf ../portfolio/public/parth_cv_academic.pdf
 
       - name: Commit and push PDF to portfolio repo
         run: |
           cd portfolio
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add public/parth_resume.pdf
+          git add public/parth_resume.pdf public/parth_cv_academic.pdf
           if git diff --cached --quiet; then
             echo "No resume changes to commit"
             exit 0
           fi
-          git commit -m "Update resume PDF from Resume repo"
+          git commit -m "Update resume PDFs from Resume repo"
           git pull --rebase https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/ParthGaneriwala/portfolio.git master
           git push https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/ParthGaneriwala/portfolio.git HEAD:master

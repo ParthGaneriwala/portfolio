@@ -25,6 +25,7 @@ import ProjectCard from "../components/ProjectCard";
 import GitHubProfile from "../components/icons/GitHubProfile";
 import Gmail from "../components/icons/Gmail";
 import LinkedInProfile from "../components/icons/LinkedInProfile";
+import ScholarProfile from "../components/icons/ScholarProfile";
 import FeaturedProjectCard from "../components/FeaturedProjectCard";
 
 // Dark Mode
@@ -73,7 +74,7 @@ const scrollTo = (ele) => {
   });
 };
 
-export default function Home({ publications }) {
+export default function Home() {
   const [visibleSection, setVisibleSection] = useState();
   const [scrolling, setScrolling] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -239,6 +240,22 @@ export default function Home({ publications }) {
             content="The portfolio of Parth Ganeriwala, software engineer in avionics and Ph.D. in Computer Science"
           />
           <link rel="icon" href="/favicon.ico" />
+          <link rel="canonical" href="https://parthganeriwala.com/" />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:title"
+            content="Parth Ganeriwala | Software Engineer & PhD Researcher"
+          />
+          <meta
+            property="og:description"
+            content="Safety-critical avionics software and formal verification of learning-enabled autonomous systems."
+          />
+          <meta property="og:url" content="https://parthganeriwala.com/" />
+          <meta
+            property="og:image"
+            content="https://parthganeriwala.com/og-image.jpg"
+          />
+          <meta name="twitter:card" content="summary_large_image" />
         </Head>
 
         {/* Full-screen Menu */}
@@ -442,6 +459,7 @@ export default function Home({ publications }) {
                 </li>
                 <li className="z-50 inline-block list-none lg:hidden group">
                   <button
+                    aria-label="Toggle navigation menu"
                     className={`relative w-10 h-10 ${
                       navbarOpen
                         ? "dark:text-white text-dark"
@@ -476,6 +494,7 @@ export default function Home({ publications }) {
             <div className="flex mt-auto ml-0 lg:ml-5">
               {/* Dark mode */}
               <button
+                aria-label="Toggle dark mode"
                 className="flex items-center justify-center w-7 h-12 transition-all duration-150 ease-in rounded-sm focus:outline-none group bg-transparent outline-none"
                 onClick={() => {
                   setTheme(theme === "dark" ? "light" : "dark");
@@ -530,7 +549,16 @@ export default function Home({ publications }) {
                   >
                     Download Resume
                   </a>
-                
+
+                  {/* Academic CV (publications first) */}
+                  <a
+                    href="/parth_cv_academic.pdf"
+                    download
+                    className="btn-brand btn-lg group inline-flex items-center justify-center"
+                  >
+                    Academic CV
+                  </a>
+
                   {/* Keep your existing scroll button (optional) */}
                   <button
                     className="btn-brand btn-lg group"
@@ -592,13 +620,92 @@ export default function Home({ publications }) {
                 </div>
                 <div className="flex w-full h-full mb-4 md:pl-8 md:w-2/5 md:mb-0">
                   <Image
-                    src="/headshot-2023.jpg"
+                    src="/headshot-2023.webp"
                     className="overflow-hidden rounded-md"
                     width={880}
                     height={880}
                     alt={"Parth Ganeriwala headshot"}
                   />
                 </div>
+              </div>
+
+              {/* Experience */}
+              <div className="mt-16">
+                <h3 className="mb-6 text-3xl">Experience</h3>
+                {[
+                  {
+                    role: "Software Engineer II",
+                    org: "Avidyne",
+                    dates: "May 2026 – Present",
+                    bullets: [
+                      "Design and implement embedded C++ software for avionics flight displays: OS services, device drivers and touchscreen interfaces.",
+                      "Verify software and maintain requirements traceability to support DO-178C and FAA certification audits.",
+                      "Led testing for a major flight-display software release, cutting the release cycle by 67% versus the previous minor release.",
+                      "Co-created an internal Claude Code toolkit for certification work, adopted by 5 engineers.",
+                      "Mentor 6 early-career engineers, including 4 interns.",
+                    ],
+                  },
+                  {
+                    role: "Software Engineer Intern / Co-Op",
+                    org: "Avidyne",
+                    dates: "May 2025 – May 2026",
+                    bullets: [
+                      "Expanded end-to-end test coverage across navigation, communication, flight management and flight display systems by 25%.",
+                      "Built 30+ system-level and flight-specific test cases, cutting initial verification cycle time by ~10%.",
+                    ],
+                  },
+                  {
+                    role: "Research Scholar",
+                    org: "ASSIST Research Lab, Florida Institute of Technology",
+                    dates: "August 2021 – Present",
+                    bullets: [
+                      "Formally modeling human cognitive behavior representation with respect to cyber-sickness in AR/VR systems, in a DARPA-funded collaboration with Iowa State University, RTX Technologies Research Center and Smart Information Flow Technologies.",
+                      "Research on formal verification and assurance of learning-enabled autonomous systems, funded by NASA, DARPA and NAVAIR.",
+                      "Mentored 20–30 undergraduate and high school students, leading to 11 publications.",
+                    ],
+                  },
+                ].map((job) => (
+                  <div key={job.role + job.org} className="mb-8">
+                    <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">
+                      <p className="mb-1 text-xl font-semibold dark:text-white text-darker">
+                        {job.role} · {job.org}
+                      </p>
+                      <span className="text-sm dark:text-light text-mid">
+                        {job.dates}
+                      </span>
+                    </div>
+                    <ul className="pl-5 space-y-1 list-disc text-dark dark:text-light">
+                      {job.bullets.map((b) => (
+                        <li key={b}>{b}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+
+              {/* Education */}
+              <div className="mt-8">
+                <h3 className="mb-6 text-3xl">Education</h3>
+                <ul className="space-y-2 text-dark dark:text-light">
+                  <li>
+                    <span className="font-semibold dark:text-white text-darker">
+                      Ph.D. in Computer Science
+                    </span>{" "}
+                    · Florida Institute of Technology · 2026
+                  </li>
+                  <li>
+                    <span className="font-semibold dark:text-white text-darker">
+                      M.S. in Computer Science
+                    </span>{" "}
+                    · Florida Institute of Technology · 2023
+                  </li>
+                  <li>
+                    <span className="font-semibold dark:text-white text-darker">
+                      B.E. in Computer Science
+                    </span>{" "}
+                    · Birla Institute of Technology and Science, Pilani · 2021
+                  </li>
+                </ul>
               </div>
             </div>
           </section>
@@ -661,7 +768,7 @@ export default function Home({ publications }) {
               />
               <Icon
                   IconType={Pytorch}
-                  title="Pytorch"
+                  title="PyTorch"
                   width={"w-16"}
                   height={"h-16"}
                   padding={"p-0"}
@@ -675,7 +782,7 @@ export default function Home({ publications }) {
               />
               <Icon
                 IconType={Tensorflow}
-                title="Tensorflow"
+                title="TensorFlow"
                 width={"w-16"}
                 height={"h-16"}
                 padding={"p-0"}
@@ -725,7 +832,7 @@ export default function Home({ publications }) {
               {/* MongoDb */}
               <Icon
                 IconType={MongoDb}
-                title="MongoDb"
+                title="MongoDB"
                 width={"w-16"}
                 height={"h-16"}
                 padding={"p-0"}
@@ -758,7 +865,7 @@ export default function Home({ publications }) {
               />
               <Icon
                 IconType={Numpy}
-                title="Numpy"
+                title="NumPy"
                 width={"w-16"}
                 height={"h-16"}
                 padding={"p-0"}
@@ -870,7 +977,7 @@ export default function Home({ publications }) {
               />
               <Icon
                   IconType={Gitlab}
-                  title="Gitlab"
+                  title="GitLab"
                   width={"w-16"}
                   height={"h-16"}
                   padding={"p-0"}
@@ -898,7 +1005,7 @@ export default function Home({ publications }) {
               />
               <Icon
                   IconType={Cuda}
-                  title="Cuda"
+                  title="CUDA"
                   width={"w-16"}
                   height={"h-16"}
                   padding={"p-0"}
@@ -989,7 +1096,7 @@ export default function Home({ publications }) {
           {/*      flexDirection={`flex-col lg:flex-row`}*/}
           {/*      imgWidth={"1366"}*/}
           {/*      imgHeight={"666"}*/}
-          {/*      imgSrc={"/nuxmvSoar.png"}*/}
+          {/*      imgSrc={"/nuxmvSoar.webp"}*/}
           {/*      liveLink={"https://assistresearchlab.fit.edu/"}*/}
           {/*      repoLink={null}*/}
           {/*      stack={*/}
@@ -1096,7 +1203,7 @@ export default function Home({ publications }) {
                   flexDirection={`flex-col lg:flex-row`}
                   imgWidth={"1366"}
                   imgHeight={"666"}
-                  imgSrc={"/nuxmvSoar.png"}
+                  imgSrc={"/nuxmvSoar.webp"}
                   liveLink={"https://assistresearchlab.fit.edu/"}
                   repoLink={null}
                   stack={
@@ -1120,7 +1227,7 @@ export default function Home({ publications }) {
                   flexDirection={`flex-col lg:flex-row-reverse`}
                   imgWidth={"1366"}
                   imgHeight={"666"}
-                  imgSrc={"/assist.png"}
+                  imgSrc={"/assist.webp"}
                   liveLink={"https://openaccess.thecvf.com/content/CVPR2024W/VDU/html/Khan_ALINA_Advanced_Line_Identification_and_Notation_Algorithm_CVPRW_2024_paper.html"}
                   repoLink={null}
                   stack={<><Icon
@@ -1175,7 +1282,7 @@ export default function Home({ publications }) {
                   flexDirection={`flex-col lg:flex-row-reverse`}
                   imgWidth={"1366"}
                   imgHeight={"666"}
-                  imgSrc={"/sysml.png"}
+                  imgSrc={"/sysml.webp"}
                   liveLink={"https://arxiv.org/abs/2501.18514"}
                   repoLink={null}
                   stack={<><Icon
@@ -1382,6 +1489,9 @@ export default function Home({ publications }) {
                   <LinkedInProfile marginBottom={"mb-0"}/>
                 </span>
                 <span className="mr-2">
+                  <ScholarProfile marginBottom={"mb-0"}/>
+                </span>
+                <span className="mr-2">
                   <Gmail marginBottom={"mb-0"}/>
                 </span>
               </div>
@@ -1396,6 +1506,7 @@ export default function Home({ publications }) {
             <div className="absolute bottom-0 items-center hidden mt-auto mr-auto text-white left-8 md:flex md:flex-col">
               <GitHubProfile marginBottom={"mb-4"} />
               <LinkedInProfile marginBottom={"mb-4"} />
+              <ScholarProfile marginBottom={"mb-4"} />
               <Gmail marginBottom={"mb-4"} />
               <div className="w-0.5 dark:bg-white bg-dark h-24 opacity-20 mt-2"></div>
             </div>
@@ -1405,6 +1516,7 @@ export default function Home({ publications }) {
               {/* Hero - Diamond 1 */}
               <button
                 className="w-5 h-5 mb-4"
+                aria-label="Go to Home"
                 onClick={() => {
                   scrollTo(homeRef.current);
                 }}
@@ -1444,6 +1556,7 @@ export default function Home({ publications }) {
               {/* About - Diamond 2 */}
               <button
                 className="w-5 h-5 mb-4"
+                aria-label="Go to About"
                 onClick={() => {
                   scrollTo(aboutRef.current);
                 }}
@@ -1483,6 +1596,7 @@ export default function Home({ publications }) {
               {/* Skills - Diamond 3 */}
               <button
                 className="w-5 h-5 mb-4"
+                aria-label="Go to Skills"
                 onClick={() => {
                   scrollTo(skillsRef.current);
                 }}
@@ -1522,6 +1636,7 @@ export default function Home({ publications }) {
               {/* My Work - Diamond 4 */}
               <button
                 className="w-5 h-5 mb-4"
+                aria-label="Go to My Work"
                 onClick={() => {
                   scrollTo(myWorkRef.current);
                 }}
@@ -1561,6 +1676,7 @@ export default function Home({ publications }) {
               {/* Contact - Diamond 5 */}
               <button
                 className="w-5 h-5 mb-4"
+                aria-label="Go to Contact"
                 onClick={() => {
                   scrollTo(contactRef.current);
                 }}

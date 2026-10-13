@@ -7,6 +7,7 @@ const GitHubProfile = ({ marginBottom }) => {
         href="https://github.com/ParthGaneriwala"
         target="_blank"
         rel="noreferrer"
+      aria-label="GitHub profile"
       >
         <svg
           className="dark:text-white text-dark transition-all duration-300 ease-in-out transform translate-y-0 dark:opacity-50 fill-current dark:hover:opacity-100 hover:-translate-y-1"

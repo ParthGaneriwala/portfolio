@@ -7,6 +7,7 @@ const LinkedInProfile = ({ marginBottom }) => {
         href="https://www.linkedin.com/in/parth-ganeriwala/"
         target="_blank"
         rel="noreferrer"
+      aria-label="LinkedIn profile"
       >
         <svg
           className="dark:text-white text-dark transition-all duration-300 ease-in-out transform translate-y-0 dark:opacity-50 fill-current dark:hover:opacity-100 hover:-translate-y-1"

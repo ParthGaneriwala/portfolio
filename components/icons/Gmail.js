@@ -7,6 +7,7 @@ const Gmail = ({ marginBottom }) => {
             href="https://parthganeriwala.com/parth_resume.pdf"
             target="_blank"
             rel="noreferrer"
+        aria-label="Download resume (PDF)"
         >
             <svg
               className="dark:text-white text-dark transition-all duration-300 ease-in-out transform translate-y-0 dark:opacity-50 fill-current dark:hover:opacity-100 hover:-translate-y-1"

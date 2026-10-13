@@ -40,5 +40,5 @@ jobs:
             exit 0
           fi
           git commit -m "Update resume PDF from Resume repo"
-          git pull --rebase https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/ParthGaneriwala/portfolio.git HEAD:master
+          git pull --rebase https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/ParthGaneriwala/portfolio.git master
           git push https://x-access-token:${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/ParthGaneriwala/portfolio.git HEAD:master

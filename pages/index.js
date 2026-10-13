@@ -233,10 +233,10 @@ export default function Home({ publications }) {
         }`}
       >
         <Head>
-          <title>Parth Ganeriwala | PhD Research Professional</title>
+          <title>Parth Ganeriwala | Software Engineer & PhD Researcher</title>
           <meta
             name="description"
-            content="The portfolio of PhD researcher, Parth Ganeriwala"
+            content="The portfolio of Parth Ganeriwala, software engineer in avionics and Ph.D. in Computer Science"
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -508,9 +508,10 @@ export default function Home({ publications }) {
                     eraseSpeed={50}
                     eraseDelay={1500}
                     text={[
-                      "Research Professional",
-                      "Ph.D. Candidate",
-                      "Avid Amine Watcher",
+                      "Software Engineer",
+                      "Research Scholar",
+                      "Ph.D. in Computer Science",
+                      "Avid Anime Watcher",
                       "Writer",
                       "Prati Lover",
                     ]}
@@ -555,17 +556,28 @@ export default function Home({ publications }) {
               <div className="flex flex-col-reverse items-start w-full md:flex-row">
                 <div className="flex flex-col w-full md:pr-8 md:w-3/5">
                   <p className="text-lg">
-                    Hi! I&apos;m Parth and I&apos;m a Graduate Research Assistant,
-                    and a doctoral candidate in Computer Science at {""}
+                    Hi! I&apos;m Parth, a Software Engineer at{" "}
+                    <a
+                        className="underline-link"
+                        href="https://www.avidyne.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                    >
+                      Avidyne
+                    </a>{" "}
+                    building safety-critical avionics software, and a research
+                    scholar at the ASSIST Research Lab. I recently completed my
+                    Ph.D. in Computer Science at {""}
                   <a
-                      class="underline-link"
+                      className="underline-link"
                       href="https://fit.edu"
                       target="_blank"
                       rel="noreferrer"
                   >
                     Florida Institute of Technology
                     </a>
-                  .</p>
+                  , researching formal verification and assurance of
+                  learning-enabled autonomous systems.</p>
 
                     <p className="text-lg">
                       I was always curious about the "behind-the-scenes" of literally
@@ -634,6 +646,20 @@ export default function Home({ publications }) {
                 fixedHeight={"h-28"}
               />
               <Icon
+                IconType={C}
+                title="C/C++"
+                width={"w-16"}
+                height={"h-16"}
+                padding={"p-0"}
+                flexDirection={"flex-col"}
+                titleMargins={"mt-4"}
+                titleSize={"text-sm sm:text-sm"}
+                marginBottom={"mb-4"}
+                marginRight={"mr-0"}
+                textTransform={"normal-case"}
+                fixedHeight={"h-28"}
+              />
+              <Icon
                   IconType={Pytorch}
                   title="Pytorch"
                   width={"w-16"}
@@ -689,117 +715,12 @@ export default function Home({ publications }) {
                   textTransform={"normal-case"}
                   fixedHeight={"h-28"}
               />
-              {/* HTML */}
-              <Icon
-                IconType={Html}
-                title="HTML"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
 
-              {/* CSS */}
-              <Icon
-                IconType={Css}
-                title="CSS"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
 
-              {/* Javascript */}
-              <Icon
-                IconType={Javascript}
-                title="Javascript"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
 
-              {/* React */}
-              <Icon
-                IconType={ReactJs}
-                title="React"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
 
-              {/* Next */}
-              <Icon
-                IconType={NextJs}
-                title="Next"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
 
-              {/* Node */}
-              <Icon
-                IconType={NodeJs}
-                title="Node"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
 
-              {/* Express */}
-              <Icon
-                IconType={Express}
-                title="Express"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
 
               {/* MongoDb */}
               <Icon
@@ -818,68 +739,9 @@ export default function Home({ publications }) {
               />
 
               {/*/!* Sass *!/*/}
-              <Icon
-                IconType={Sass}
-                title="Sass"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
 
-              {/* Bootstrap */}
-              <Icon
-                IconType={Bootstrap}
-                title="Bootstrap"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
 
-              {/* Firebase */}
-              <Icon
-                IconType={Firebase}
-                title="Firebase"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
 
-              {/* Photoshop */}
-              <Icon
-                IconType={Photoshop}
-                title="Photoshop"
-                width={"w-16"}
-                height={"h-16"}
-                padding={"p-0"}
-                flexDirection={"flex-col"}
-                titleMargins={"mt-4"}
-                titleSize={"text-sm sm:text-sm"}
-                marginBottom={"mb-4"}
-                marginRight={"mr-0"}
-                textTransform={"normal-case"}
-                fixedHeight={"h-28"}
-              />
               <Icon
                 IconType={Jupyter}
                 title="Jupyter"
@@ -1080,6 +942,30 @@ export default function Home({ publications }) {
 
 
             </div>
+
+            {/* Avionics & safety-critical skills */}
+            <div className="mt-10">
+              <h3 className="mb-4 text-2xl">Avionics &amp; Safety-Critical</h3>
+              <ul className="flex flex-wrap gap-2">
+                {[
+                  "DO-178C",
+                  "DOORS",
+                  "Embedded C++",
+                  "Real-time Systems",
+                  "HIL Simulation",
+                  "Test Automation",
+                  "Formal Verification",
+                  "Claude Code",
+                ].map((skill) => (
+                  <li
+                    key={skill}
+                    className="px-3 py-1 text-sm border rounded-full border-brand"
+                  >
+                    {skill}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </section>
 
           {/*/!* My Work *!/*/}
@@ -1229,7 +1115,7 @@ export default function Home({ publications }) {
               <FeaturedProjectCard
                   title={"ALINA + AssistTaxi Dataset"}
                   status={"Published @ CVPR'24"}
-                  description={`Line marking identification system using the AssistTaxi dataset for autonomous taxiway navigation.`}
+                  description={`Line marking identification system using the AssistTaxi dataset for autonomous taxiway navigation. AssistTaxi-v2 (AIAA SciTech 2026) extends the dataset.`}
                   float={`right-0`}
                   flexDirection={`flex-col lg:flex-row-reverse`}
                   imgWidth={"1366"}
@@ -1331,12 +1217,67 @@ export default function Home({ publications }) {
             {/*  </div>*/}
             {/*</div>*/}
 
-            {/* Other Projects header */}
-            <h2 className="text-4xl text-center">Other Projects</h2>
+            {/* Selected Publications */}
+            <h2 className="text-4xl text-center">Selected Publications</h2>
             <hr className="bg-brand w-40 h-1.5 mt-4 mb-6 mx-auto border-0"></hr>
-            <p className="mb-16 text-lg text-center">
-              Coming Soon...
+            <p className="mb-8 text-lg text-center">
+              30 accepted peer-reviewed publications in formal verification,
+              assurance, and machine learning for autonomous systems.
             </p>
+            <ul className="mb-16 space-y-4 text-lg">
+              {[
+                {
+                  title: "Formal Analysis of Stochastic Cognitive Models: A Translation Framework from Soar to PRISM",
+                  venue: "NASA Formal Methods 2026",
+                  href: "https://link.springer.com/chapter/10.1007/978-3-032-28079-4_9",
+                },
+                {
+                  title: "VIROPLEX: A GNN-Driven Assessment of the Pandemic Potential of Zoonotic Bat Viruses",
+                  venue: "IEEE ICTAI 2026",
+                },
+                {
+                  title: "Compositional Reasoning over System Architectures with Integrated Cognitive Model",
+                  venue: "IEEE SysCon 2026",
+                },
+                {
+                  title: "AssistTaxi-v2: A Scalable Dataset for Taxiway/Runway Scene Understanding Under Diverse Conditions",
+                  venue: "AIAA SciTech 2026",
+                },
+                {
+                  title: "Correlation-Threshold Feature Selection for Internet of Things (IoT) Device Identification under Domain Shift",
+                  venue: "ISAIM 2026",
+                },
+                {
+                  title: "Explainable Assurance through Compositional Verification with Cognitive Models",
+                  venue: "IEEE RTSS/ESRA 2025",
+                },
+                {
+                  title: "Can Someone Prove Your Operator Won’t Get Distracted? A Gentle Introduction to Formal Methods in Human Factors",
+                  venue: "HFES 2025",
+                  href: "https://journals.sagepub.com/doi/full/10.1177/10711813251369496",
+                },
+                {
+                  title: "Evaluating LLM Translation for Prompt-Enhanced ACT-R and Soar Models",
+                  venue: "BRIMS 2025",
+                },
+              ].map((pub) => (
+                <li key={pub.title}>
+                  {pub.href ? (
+                    <a
+                      className="underline-link"
+                      href={pub.href}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {pub.title}
+                    </a>
+                  ) : (
+                    <span>{pub.title}</span>
+                  )}
+                  <span className="block text-sm">{pub.venue}</span>
+                </li>
+              ))}
+            </ul>
 
             {/* Other Projects Container */}
             {/*<div className="grid grid-flow-row grid-rows-2 gap-4 grid-col-1 lg:grid-cols-3">*/}

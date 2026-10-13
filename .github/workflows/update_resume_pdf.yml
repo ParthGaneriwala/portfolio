@@ -4,6 +4,11 @@ on:
   repository_dispatch:
     types: [resume-updated]
 
+# Only let the newest run proceed so rapid pushes to the Resume repo don't race each other.
+concurrency:
+  group: resume-pdf-update
+  cancel-in-progress: true
+
 jobs:
   build-and-copy-resume:
     runs-on: ubuntu-latest

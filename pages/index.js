@@ -659,7 +659,7 @@ export default function Home() {
                     org: "ASSIST Research Lab, Florida Institute of Technology",
                     dates: "August 2021 – Present",
                     bullets: [
-                      "Formally modeling human cognitive behavior representation with respect to cyber-sickness in AR/VR systems, in a DARPA-funded collaboration with Iowa State University, RTX Technologies Research Center and Smart Information Flow Technologies.",
+                      "Formally modeling human cognitive behavior representation with respect to cyber-sickness in AR/VR systems, in a DARPA-funded collaboration with Collins Aerospace, Iowa State University, RTX Technologies Research Center and Smart Information Flow Technologies.",
                       "Research on formal verification and assurance of learning-enabled autonomous systems, funded by NASA, DARPA and NAVAIR.",
                       "Mentored 20–30 undergraduate and high school students, leading to 11 publications.",
                     ],
